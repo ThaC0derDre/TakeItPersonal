@@ -162,22 +162,6 @@
             </objects>
             <point key="canvasLocation" x="1225" y="-619"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="9IL-aq-7Zj">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QYO-eq-xQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="zyf-f7-aqC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gHV-Pm-N5w" customClass="QuickLookViewController" customModule="TakeItPersonal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1GN-Jk-VNY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="dQD-fe-xDI"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1720" y="28"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15f-a1-f3i">
             <objects>
@@ -188,19 +172,35 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zyf-f7-aqC" kind="relationship" relationship="viewControllers" id="f71-c4-HOL"/>
-                        <segue destination="nJL-pi-h3Q" kind="relationship" relationship="viewControllers" id="WuE-EK-dBH"/>
+                        <segue destination="m8r-bd-TJQ" kind="relationship" relationship="viewControllers" id="C6Y-O0-qxR"/>
+                        <segue destination="nJL-pi-h3Q" kind="relationship" relationship="viewControllers" id="tb1-Dm-z7Q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzH-33-fNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2610" y="-277"/>
         </scene>
-        <!--Item-->
+        <!--Balance Remaining-->
+        <scene sceneID="fEx-DS-Yqf">
+            <objects>
+                <viewController id="m8r-bd-TJQ" customClass="QuickLookTableViewController" customModule="TakeItPersonal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2dT-NM-bUe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Mep-c7-bGy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Balance Remaining" id="Y8o-JG-psw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNT-od-aW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1685" y="35"/>
+        </scene>
+        <!--Ledger-->
         <scene sceneID="boF-tA-Pra">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nJL-pi-h3Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zfa-hS-Jq7"/>
+                    <tabBarItem key="tabBarItem" title="Ledger" id="Zfa-hS-Jq7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vn6-wF-QxD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
