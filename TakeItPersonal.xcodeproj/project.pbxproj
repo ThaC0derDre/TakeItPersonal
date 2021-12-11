@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D9F781B6DDEBB7EECAFA8EE /* Pods_TakeItPersonal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F55D7A138F3A4DA13DF307 /* Pods_TakeItPersonal.framework */; };
 		311BFBF127641DA700BA9CDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFBF027641DA700BA9CDF /* AppDelegate.swift */; };
 		311BFBF327641DA700BA9CDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFBF227641DA700BA9CDF /* SceneDelegate.swift */; };
-		311BFBF527641DA700BA9CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFBF427641DA700BA9CDF /* ViewController.swift */; };
 		311BFBF827641DA700BA9CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311BFBF627641DA700BA9CDF /* Main.storyboard */; };
 		311BFBFA27641DA800BA9CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311BFBF927641DA800BA9CDF /* Assets.xcassets */; };
 		311BFBFD27641DA800BA9CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311BFBFB27641DA800BA9CDF /* LaunchScreen.storyboard */; };
+		311BFC0827641F8800BA9CDF /* MonthsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */; };
+		311BFC0A2764283600BA9CDF /* TransactionCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */; };
+		311BFC1127642A1000BA9CDF /* RealmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC1027642A1000BA9CDF /* RealmDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		311BFBED27641DA700BA9CDF /* TakeItPersonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItPersonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		311BFBF027641DA700BA9CDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		311BFBF227641DA700BA9CDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		311BFBF427641DA700BA9CDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		311BFBF727641DA700BA9CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		311BFBF927641DA800BA9CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		311BFBFC27641DA800BA9CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		311BFBFE27641DA800BA9CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsTableViewController.swift; sourceTree = "<group>"; };
+		311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCreateViewController.swift; sourceTree = "<group>"; };
+		311BFC1027642A1000BA9CDF /* RealmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataModel.swift; sourceTree = "<group>"; };
+		450D32C499448B77A689BCEA /* Pods-TakeItPersonal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeItPersonal.release.xcconfig"; path = "Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal.release.xcconfig"; sourceTree = "<group>"; };
+		53F55D7A138F3A4DA13DF307 /* Pods_TakeItPersonal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeItPersonal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B77314D1D02F12F9EB7E90C /* Pods-TakeItPersonal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeItPersonal.debug.xcconfig"; path = "Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9F781B6DDEBB7EECAFA8EE /* Pods_TakeItPersonal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16743A9D73E3A5E3225BEA91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B77314D1D02F12F9EB7E90C /* Pods-TakeItPersonal.debug.xcconfig */,
+				450D32C499448B77A689BCEA /* Pods-TakeItPersonal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		311BFBE427641DA700BA9CDF = {
 			isa = PBXGroup;
 			children = (
 				311BFBEF27641DA700BA9CDF /* TakeItPersonal */,
 				311BFBEE27641DA700BA9CDF /* Products */,
+				16743A9D73E3A5E3225BEA91 /* Pods */,
+				82314CFBA685BE0FAAC31C3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +76,65 @@
 		311BFBEF27641DA700BA9CDF /* TakeItPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				311BFC0F276429F500BA9CDF /* New Group */,
+				311BFC0C2764285500BA9CDF /* Views */,
+				311BFC0B2764284B00BA9CDF /* Controllers */,
+				311BFC0527641DC600BA9CDF /* Assets */,
+				311BFC0427641DAE00BA9CDF /* Supporting Files */,
+			);
+			path = TakeItPersonal;
+			sourceTree = "<group>";
+		};
+		311BFC0427641DAE00BA9CDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				311BFBF027641DA700BA9CDF /* AppDelegate.swift */,
 				311BFBF227641DA700BA9CDF /* SceneDelegate.swift */,
-				311BFBF427641DA700BA9CDF /* ViewController.swift */,
-				311BFBF627641DA700BA9CDF /* Main.storyboard */,
-				311BFBF927641DA800BA9CDF /* Assets.xcassets */,
 				311BFBFB27641DA800BA9CDF /* LaunchScreen.storyboard */,
 				311BFBFE27641DA800BA9CDF /* Info.plist */,
 			);
-			path = TakeItPersonal;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		311BFC0527641DC600BA9CDF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				311BFBF927641DA800BA9CDF /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		311BFC0B2764284B00BA9CDF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */,
+				311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		311BFC0C2764285500BA9CDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				311BFBF627641DA700BA9CDF /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		311BFC0F276429F500BA9CDF /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				311BFC1027642A1000BA9CDF /* RealmDataModel.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		82314CFBA685BE0FAAC31C3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F55D7A138F3A4DA13DF307 /* Pods_TakeItPersonal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 311BFC0127641DA800BA9CDF /* Build configuration list for PBXNativeTarget "TakeItPersonal" */;
 			buildPhases = (
+				2B9847D9E1E6BD4E242B969E /* [CP] Check Pods Manifest.lock */,
 				311BFBE927641DA700BA9CDF /* Sources */,
 				311BFBEA27641DA700BA9CDF /* Frameworks */,
 				311BFBEB27641DA700BA9CDF /* Resources */,
+				007F39BC16DA6272E24243CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +205,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		007F39BC16DA6272E24243CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B9847D9E1E6BD4E242B969E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TakeItPersonal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		311BFBE927641DA700BA9CDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311BFBF527641DA700BA9CDF /* ViewController.swift in Sources */,
 				311BFBF127641DA700BA9CDF /* AppDelegate.swift in Sources */,
+				311BFC0A2764283600BA9CDF /* TransactionCreateViewController.swift in Sources */,
 				311BFBF327641DA700BA9CDF /* SceneDelegate.swift in Sources */,
+				311BFC1127642A1000BA9CDF /* RealmDataModel.swift in Sources */,
+				311BFC0827641F8800BA9CDF /* MonthsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +400,7 @@
 		};
 		311BFC0227641DA800BA9CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B77314D1D02F12F9EB7E90C /* Pods-TakeItPersonal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +429,7 @@
 		};
 		311BFC0327641DA800BA9CDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450D32C499448B77A689BCEA /* Pods-TakeItPersonal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

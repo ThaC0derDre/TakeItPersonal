@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MonthsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
