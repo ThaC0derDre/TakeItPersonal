@@ -108,7 +108,7 @@
                         <barButtonItem key="backBarButtonItem" title="Ledger" id="BUb-TS-ECc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="mgE-oR-uIA">
                             <connections>
-                                <segue destination="BXp-e8-Bzr" kind="popoverPresentation" popoverAnchorBarButtonItem="mgE-oR-uIA" id="EP8-PP-i3I">
+                                <segue destination="BXp-e8-Bzr" kind="popoverPresentation" popoverAnchorBarButtonItem="mgE-oR-uIA" id="vIg-e2-dQC">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>

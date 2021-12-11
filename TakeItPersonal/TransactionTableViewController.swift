@@ -42,7 +42,9 @@ class TransactionTableViewController: UITableViewController {
          return transactionsArray?.count ?? 1
      }
      
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     
 //    func loadItems(){
