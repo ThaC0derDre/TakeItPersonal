@@ -16,6 +16,8 @@
 		311BFC0827641F8800BA9CDF /* MonthsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */; };
 		311BFC0A2764283600BA9CDF /* TransactionCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */; };
 		311BFC1127642A1000BA9CDF /* RealmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC1027642A1000BA9CDF /* RealmDataModel.swift */; };
+		311BFC13276438FF00BA9CDF /* LedgersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC12276438FF00BA9CDF /* LedgersViewController.swift */; };
+		311BFC152764428E00BA9CDF /* QuickLookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC142764428E00BA9CDF /* QuickLookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsTableViewController.swift; sourceTree = "<group>"; };
 		311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCreateViewController.swift; sourceTree = "<group>"; };
 		311BFC1027642A1000BA9CDF /* RealmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataModel.swift; sourceTree = "<group>"; };
+		311BFC12276438FF00BA9CDF /* LedgersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgersViewController.swift; sourceTree = "<group>"; };
+		311BFC142764428E00BA9CDF /* QuickLookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookViewController.swift; sourceTree = "<group>"; };
 		450D32C499448B77A689BCEA /* Pods-TakeItPersonal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeItPersonal.release.xcconfig"; path = "Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal.release.xcconfig"; sourceTree = "<group>"; };
 		53F55D7A138F3A4DA13DF307 /* Pods_TakeItPersonal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeItPersonal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B77314D1D02F12F9EB7E90C /* Pods-TakeItPersonal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeItPersonal.debug.xcconfig"; path = "Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +80,7 @@
 		311BFBEF27641DA700BA9CDF /* TakeItPersonal */ = {
 			isa = PBXGroup;
 			children = (
-				311BFC0F276429F500BA9CDF /* New Group */,
+				311BFC0F276429F500BA9CDF /* DataModel */,
 				311BFC0C2764285500BA9CDF /* Views */,
 				311BFC0B2764284B00BA9CDF /* Controllers */,
 				311BFC0527641DC600BA9CDF /* Assets */,
@@ -109,6 +113,8 @@
 			children = (
 				311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */,
 				311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */,
+				311BFC12276438FF00BA9CDF /* LedgersViewController.swift */,
+				311BFC142764428E00BA9CDF /* QuickLookViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -121,12 +127,12 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		311BFC0F276429F500BA9CDF /* New Group */ = {
+		311BFC0F276429F500BA9CDF /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				311BFC1027642A1000BA9CDF /* RealmDataModel.swift */,
 			);
-			name = "New Group";
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 		82314CFBA685BE0FAAC31C3D /* Frameworks */ = {
@@ -255,6 +261,8 @@
 				311BFBF127641DA700BA9CDF /* AppDelegate.swift in Sources */,
 				311BFC0A2764283600BA9CDF /* TransactionCreateViewController.swift in Sources */,
 				311BFBF327641DA700BA9CDF /* SceneDelegate.swift in Sources */,
+				311BFC152764428E00BA9CDF /* QuickLookViewController.swift in Sources */,
+				311BFC13276438FF00BA9CDF /* LedgersViewController.swift in Sources */,
 				311BFC1127642A1000BA9CDF /* RealmDataModel.swift in Sources */,
 				311BFC0827641F8800BA9CDF /* MonthsTableViewController.swift in Sources */,
 			);
