@@ -68,7 +68,13 @@ class MonthsTableViewController: UITableViewController {
         
     }
     @objc func doneSelectingDate(){
-       textField.text = "\(datePicker.date)"
+        //date formatter
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        textField.text = formatter.string(from: datePicker.date)
        self.view.endEditing(true)
    }
     
