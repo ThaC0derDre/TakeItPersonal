@@ -8,15 +8,23 @@
 import UIKit
 import RealmSwift
 
-class TransactionCreateViewController: UIViewController {
+class TransactionCreateViewController: UITableViewController {
 
+    
+    
     @IBOutlet weak var noteTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+   
+    
+    
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
         let amount = amountTextField.text

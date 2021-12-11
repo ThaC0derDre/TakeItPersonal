@@ -11,45 +11,40 @@ class MonthsTableViewController: UITableViewController {
     
     let realm = try! Realm()
     
-    var monthsArray: Results<Months>?
+    var datesArray: Results<Months>?
     
     var textField = UITextField()
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    load()
     }
     //MARK: - TableView DataSource Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let label = monthsArray?[indexPath.row]
+        let label = datesArray?[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "MonthsCell", for: indexPath)
-        cell.textLabel?.text = label?.months ?? "No Months Added yet"
+        cell.textLabel?.text = label?.dates ?? "No Months Added yet"
         
         return cell
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return monthsArray?.count ?? 1
+        return datesArray?.count ?? 1
     }
     
-    //MARK: - TableView Delegate Methods
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+    //MARK: - Add New Dates
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
-        
         let alert = UIAlertController(title: "Add Month", message: nil, preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { action in
-            let newMonth = Months()
-            
-            newMonth.months = self.textField.text!
-            self.save(month: newMonth)
-            print("THISSSSS is the output : \(self.textField.text)")
+            let newDate = Months()
+            newDate.dates = self.textField.text!
+            self.save(date: newDate)
+          // print("THISSSSS is the output : \(self.textField.text)")
+            self.load()
         }
         
         alert.addAction(action)
@@ -80,10 +75,10 @@ class MonthsTableViewController: UITableViewController {
     }
 
     //MARK: - Functions
-    func save(month: Months){
+    func save(date: Months){
     do{
         try realm.write(){
-        realm.add(month)
+        realm.add(date)
         }
     }catch{
         print("Error saving Category: \(error)")
@@ -93,7 +88,7 @@ class MonthsTableViewController: UITableViewController {
     
     func load(){
         
-        monthsArray = realm.objects(Months.self)
+        datesArray = realm.objects(Months.self)
         
         tableView.reloadData()
     }
@@ -110,5 +105,18 @@ class MonthsTableViewController: UITableViewController {
         textField.text = formatter.string(from: datePicker.date)
        self.view.endEditing(true)
    }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToLedger", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! TransactionTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedMonth = datesArray?[indexPath.row]
+        }
+    }
     
 }

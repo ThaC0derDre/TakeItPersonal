@@ -9,7 +9,6 @@ import UIKit
 
 class TransactionsTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var amountLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!

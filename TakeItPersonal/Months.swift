@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class Months: Object {
-    @objc dynamic var months = ""
+    @objc dynamic var dates = ""
     let ledger = List<Ledgers>()
     
 }
