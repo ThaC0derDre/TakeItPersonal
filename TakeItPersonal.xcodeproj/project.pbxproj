@@ -87,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				311BFC0F276429F500BA9CDF /* DataModel */,
-				311BFC0C2764285500BA9CDF /* Views */,
 				311BFC0B2764284B00BA9CDF /* Controllers */,
+				311BFC0C2764285500BA9CDF /* Views */,
 				311BFC0527641DC600BA9CDF /* Assets */,
 				311BFC0427641DAE00BA9CDF /* Supporting Files */,
 			);

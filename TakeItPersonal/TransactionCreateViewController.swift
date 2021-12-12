@@ -12,6 +12,7 @@ class TransactionCreateViewController: UITableViewController {
 
     
     
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var noteTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     

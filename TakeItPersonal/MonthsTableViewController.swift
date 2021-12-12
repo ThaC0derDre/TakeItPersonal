@@ -101,6 +101,7 @@ class MonthsTableViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
+        formatter.dateFormat = "MMMM yyyy"
         
         textField.text = formatter.string(from: datePicker.date)
        self.view.endEditing(true)
