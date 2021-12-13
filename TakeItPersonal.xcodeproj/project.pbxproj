@@ -19,8 +19,8 @@
 		311BFC192764482200BA9CDF /* Money.json in Resources */ = {isa = PBXBuildFile; fileRef = 311BFC182764482200BA9CDF /* Money.json */; };
 		311BFC1D2764773700BA9CDF /* Months.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC1C2764773700BA9CDF /* Months.swift */; };
 		311BFC1F2764775F00BA9CDF /* Ledgers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC1E2764775F00BA9CDF /* Ledgers.swift */; };
-		311BFC21276486D900BA9CDF /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC20276486D900BA9CDF /* TransactionsTableViewCell.swift */; };
-		311BFC232764977400BA9CDF /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFC222764977400BA9CDF /* TransactionTableViewController.swift */; };
+		31C6C8642766F1CE004605B9 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6C8632766F1CE004605B9 /* TransactionCell.swift */; };
+		31C6C8662766F23C004605B9 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6C8652766F23C004605B9 /* TransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		311BFC182764482200BA9CDF /* Money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Money.json; sourceTree = "<group>"; };
 		311BFC1C2764773700BA9CDF /* Months.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Months.swift; sourceTree = "<group>"; };
 		311BFC1E2764775F00BA9CDF /* Ledgers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledgers.swift; sourceTree = "<group>"; };
-		311BFC20276486D900BA9CDF /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
-		311BFC222764977400BA9CDF /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
+		31C6C8632766F1CE004605B9 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		31C6C8652766F23C004605B9 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		450D32C499448B77A689BCEA /* Pods-TakeItPersonal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeItPersonal.release.xcconfig"; path = "Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal.release.xcconfig"; sourceTree = "<group>"; };
 		53F55D7A138F3A4DA13DF307 /* Pods_TakeItPersonal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeItPersonal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B77314D1D02F12F9EB7E90C /* Pods-TakeItPersonal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeItPersonal.debug.xcconfig"; path = "Target Support Files/Pods-TakeItPersonal/Pods-TakeItPersonal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				311BFC0727641F8800BA9CDF /* MonthsTableViewController.swift */,
+				31C6C8652766F23C004605B9 /* TransactionViewController.swift */,
 				311BFC092764283600BA9CDF /* TransactionCreateViewController.swift */,
-				311BFC222764977400BA9CDF /* TransactionTableViewController.swift */,
 				311BFC162764464A00BA9CDF /* QuickLookTableViewController.swift */,
 			);
 			name = Controllers;
@@ -129,7 +129,7 @@
 		311BFC0C2764285500BA9CDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				311BFC20276486D900BA9CDF /* TransactionsTableViewCell.swift */,
+				31C6C8632766F1CE004605B9 /* TransactionCell.swift */,
 				311BFBF627641DA700BA9CDF /* Main.storyboard */,
 			);
 			name = Views;
@@ -268,15 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311BFC21276486D900BA9CDF /* TransactionsTableViewCell.swift in Sources */,
 				311BFBF127641DA700BA9CDF /* AppDelegate.swift in Sources */,
 				311BFC0A2764283600BA9CDF /* TransactionCreateViewController.swift in Sources */,
 				311BFBF327641DA700BA9CDF /* SceneDelegate.swift in Sources */,
 				311BFC172764464A00BA9CDF /* QuickLookTableViewController.swift in Sources */,
+				31C6C8662766F23C004605B9 /* TransactionViewController.swift in Sources */,
 				311BFC1D2764773700BA9CDF /* Months.swift in Sources */,
 				311BFC1F2764775F00BA9CDF /* Ledgers.swift in Sources */,
 				311BFC0827641F8800BA9CDF /* MonthsTableViewController.swift in Sources */,
-				311BFC232764977400BA9CDF /* TransactionTableViewController.swift in Sources */,
+				31C6C8642766F1CE004605B9 /* TransactionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

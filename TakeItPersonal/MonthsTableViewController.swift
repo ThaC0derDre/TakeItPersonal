@@ -16,9 +16,13 @@ class MonthsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    load()
+        load()
     }
     //MARK: - TableView DataSource Methods
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datesArray?.count ?? 1
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let label = datesArray?[indexPath.row]
@@ -29,11 +33,21 @@ class MonthsTableViewController: UITableViewController {
         return cell
         
     }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datesArray?.count ?? 1
-    }
+    
     
     //MARK: - Add New Dates
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToLedger", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! TransactionViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedMonth = datesArray?[indexPath.row]
+        }
+    }
+    
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -45,7 +59,7 @@ class MonthsTableViewController: UITableViewController {
             newDate.dates = textField.text!
             self.save(date: newDate)
           // print("THISSSSS is the output : \(self.textField.text)")
-            self.load()
+            //self.load()
         }
         
         alert.addAction(action)
@@ -116,16 +130,6 @@ class MonthsTableViewController: UITableViewController {
            return true
 }
     
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToLedger", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! TransactionTableViewController
-        if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedMonth = datesArray?[indexPath.row]
-        }
-    }
+  
     
 }

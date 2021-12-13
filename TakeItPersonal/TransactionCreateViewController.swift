@@ -8,35 +8,50 @@
 import UIKit
 import RealmSwift
 
-class TransactionCreateViewController: UITableViewController {
+class TransactionCreateViewController: UITableView {
 
+    let realm = try! Realm()
     
+   
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var noteTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     
-   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    
     
    
     
     
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
+        
+        let transactionsArray = TransactionViewController()
+        
         let amount = amountTextField.text
-        let note = noteTextField.text
-        let date = Date()
+        let amountDouble = Double(amount!)!
+        let note = noteTextField.text!
+        let date = dateTextField.text!
         
-        let formatter = DateFormatter()
-        formatter.timeZone = .current
-        formatter.locale = .current
-        formatter.dateFormat = "MM/dd/yyyy"
+        if let currentCategory = transactionsArray.selectedMonth {
+            do{
+                try self.realm.write{
+              let newTransaction = Ledgers()
+                newTransaction.amount = amountDouble
+                newTransaction.date = date
+                newTransaction.notes = note
+                    currentCategory.ledger.append(newTransaction)
+                }
+            }catch{
+                print("Error creating new Item \(error)")
+                
+            }
+           
+        }
         
-        let theDate = formatter.string(from: date)
+        self.inputViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        
+        
     }
 }

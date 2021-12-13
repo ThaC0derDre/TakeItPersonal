@@ -28,5 +28,8 @@ class QuickLookTableViewController: UIViewController {
         super.viewWillAppear(animated)
         animationView?.play()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        animationView?.stop()
+    }
     
 }

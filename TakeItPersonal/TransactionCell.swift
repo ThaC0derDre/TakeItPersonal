@@ -1,13 +1,12 @@
 //
-//  TransactionsTableViewCell.swift
+//  TransactionCell.swift
 //  TakeItPersonal
 //
-//  Created by Andres Gutierrez on 12/10/21.
+//  Created by Andres Gutierrez on 12/12/21.
 //
 
 import UIKit
-
-class TransactionsTableViewCell: UITableViewCell {
+class TransactionCell: UITableViewCell {
 
     @IBOutlet weak var amountLabel: UILabel!
     
