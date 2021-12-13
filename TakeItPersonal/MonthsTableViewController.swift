@@ -13,8 +13,6 @@ class MonthsTableViewController: UITableViewController {
     
     var datesArray: Results<Months>?
     
-    var textField = UITextField()
-    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +36,13 @@ class MonthsTableViewController: UITableViewController {
     //MARK: - Add New Dates
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
         let alert = UIAlertController(title: "Add Month", message: nil, preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { action in
             let newDate = Months()
-            newDate.dates = self.textField.text!
+            newDate.dates = textField.text!
             self.save(date: newDate)
           // print("THISSSSS is the output : \(self.textField.text)")
             self.load()
@@ -51,21 +52,8 @@ class MonthsTableViewController: UITableViewController {
         alert.addTextField { alertTextField in
             
             alertTextField.placeholder = "Add New Month"
-            
-            
-            
-            let toolBar = UIToolbar()
-            toolBar.sizeToFit()
-            
-            let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self,
-                                            action: #selector (self.doneSelectingDate))
-            toolBar.setItems([barButton], animated: true)
-            
-            alertTextField.inputAccessoryView = toolBar
-           alertTextField.inputView = self.datePicker
-            self.datePicker.preferredDatePickerStyle = .wheels
-            self.datePicker.datePickerMode = .date
-            self.textField = alertTextField
+            textField = alertTextField
+          
             
         }
         present(alert, animated: true, completion: nil)
@@ -94,19 +82,39 @@ class MonthsTableViewController: UITableViewController {
     }
     
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let trash = UIContextualAction(style: .destructive,
+                                       title: "Trash") { [weak self] (action, view, completionHandler) in
+            
+            completionHandler(true)
+            let result = self?.delete(at: indexPath) ?? false
+            completionHandler(result)
+        }
+        trash.backgroundColor = .systemRed
+        let configuration = UISwipeActionsConfiguration(actions: [trash])
+
+        return configuration
+    }
     
-    @objc func doneSelectingDate(){
-        //date formatter
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        formatter.dateFormat = "MMMM yyyy"
-        
-        textField.text = formatter.string(from: datePicker.date)
-       self.view.endEditing(true)
-   }
     
+    func delete(at indexPath: IndexPath) -> Bool {
+        // Check if there is a category at provided row
+        guard let categories = datesArray?[indexPath.row] else {
+            return false
+        }
+        // Delete data from persistent storage
+        do {
+            // Open transaction
+        try realm.write {
+                // Insert category
+            realm.delete(categories)
+        }
+        } catch {
+            fatalError("Error deleting Category: \(error)")
+        }
+        load()
+           return true
+}
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
