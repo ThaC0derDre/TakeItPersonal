@@ -104,9 +104,7 @@
                         <barButtonItem key="backBarButtonItem" title="Ledger" id="BUb-TS-ECc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="mgE-oR-uIA">
                             <connections>
-                                <segue destination="BXp-e8-Bzr" kind="popoverPresentation" popoverAnchorBarButtonItem="mgE-oR-uIA" id="Ysz-sB-aZI">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="newLedgerPressed:" destination="BgU-cH-SVi" id="Fra-Kw-XQx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,11 +118,11 @@
             <objects>
                 <viewController id="BXp-e8-Bzr" customClass="UITableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KJg-ZT-GTD" customClass="TransactionCreateViewController" customModule="TakeItPersonal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-yo-mUj">
-                                <rect key="frame" x="157" y="329.5" width="100" height="60"/>
+                                <rect key="frame" x="157" y="373.5" width="100" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="MCJ-DY-raq"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="yCA-d1-1LW"/>
@@ -141,7 +139,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="s8V-zk-81P" userLabel="Main Text Stack">
-                                <rect key="frame" x="50" y="50" width="314" height="239.5"/>
+                                <rect key="frame" x="50" y="94" width="314" height="239.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cvn-Op-tlb">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="64.5"/>
@@ -194,7 +192,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arr-3m-1BB">
-                                <rect key="frame" x="34.5" y="175" width="10.5" height="20.5"/>
+                                <rect key="frame" x="34.5" y="219" width="10.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -221,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Or-uU-sID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="640.57971014492762" y="-634.15178571428567"/>
+            <point key="canvasLocation" x="767" y="-634"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15f-a1-f3i">
