@@ -10,6 +10,8 @@ import RealmSwift
 
 class TransactionViewController: UITableViewController {
     
+    var totalSumofTransactionsThisMonth = 0.0
+    
     let realm = try! Realm()
 
     var transactionsArray: Results<Ledgers>?
@@ -53,6 +55,10 @@ class TransactionViewController: UITableViewController {
     }
 
     @IBAction func newLedgerPressed(_ sender: UIBarButtonItem) {
+//        if let testerTimmy = selectedMonth{
+//
+//            print("OHHHHHHHHHHHHHHHHHHHHHH K, Here Is That: \(testerTimmy.ledger.value(forKey: "amount"))")
+//        }
         let alert = UIAlertController(title: "Add Transactions", message: "", preferredStyle: .alert)
         var amountTextField = UITextField()
         var dateTextField = UITextField()
@@ -74,6 +80,7 @@ class TransactionViewController: UITableViewController {
                         }
                         newItem.notes = notesTextField.text!
                         newItem.date = dateTextField.text!
+//                        newItem.sumTotal += newItem.amount
                         currentMonth.ledger.append(newItem)
                     }
                 }catch{
@@ -81,6 +88,7 @@ class TransactionViewController: UITableViewController {
                     
                 }
                 self.tableView.reloadData()
+                self.getSum()
             }
             
         }
@@ -91,6 +99,7 @@ class TransactionViewController: UITableViewController {
         alert.addTextField { (amount) in
             amount.placeholder = "$9.99"
             amountTextField = amount
+            amount.keyboardType = .decimalPad
         }
         
         alert.addTextField { (notes) in
@@ -137,8 +146,35 @@ class TransactionViewController: UITableViewController {
             fatalError("Error deleting Category: \(error)")
         }
         loadItems()
+        getSum()
            return true
 }
-    
+    func getSum(){
+        var falsey = 0.0
+        if let testerTimmy = selectedMonth{
+            let sumArray:Array = testerTimmy.ledger.value(forKey: "amount")
+            var theRealArray:Array<String> = []
+            for i in sumArray {
+                let changerToString = String(describing: i)
+                theRealArray.append(changerToString)
+            }
+            
+            var theFinalArray:Array<Double> = []
+            
+            for i in theRealArray{
+
+                if let gotEm = Double(i){
+                    theFinalArray.append(gotEm)
+                }
+            }
+            for l in theFinalArray{
+                falsey += l
+                
+            }
+            totalSumofTransactionsThisMonth = round(1000.0 * falsey) / 1000.0
+            print(totalSumofTransactionsThisMonth)
+            print("OHHHHHHHHHHHHHHHHHHHHHH K, Here Is That: \(testerTimmy.ledger.value(forKey: "amount"))")
+        }
+    }
     
 }

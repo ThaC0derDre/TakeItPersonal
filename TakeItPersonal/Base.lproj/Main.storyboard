@@ -246,14 +246,47 @@
                     <view key="view" contentMode="scaleToFill" id="2dT-NM-bUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if4-wB-w5T">
+                                <rect key="frame" x="103" y="133" width="208" height="136"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Out of $250, you have $5.25 remaining">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-Nh-I7g">
+                                <rect key="frame" x="296" y="565" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mep-c7-bGy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mep-c7-bGy" firstAttribute="bottom" secondItem="XQK-Nh-I7g" secondAttribute="bottom" constant="227" id="2c6-ub-Uga"/>
+                            <constraint firstItem="Mep-c7-bGy" firstAttribute="trailing" secondItem="XQK-Nh-I7g" secondAttribute="trailing" constant="76" id="Gvy-En-kTi"/>
+                            <constraint firstItem="if4-wB-w5T" firstAttribute="top" secondItem="Mep-c7-bGy" secondAttribute="top" constant="89" id="Kpn-df-xV3"/>
+                            <constraint firstItem="if4-wB-w5T" firstAttribute="centerY" secondItem="Mep-c7-bGy" secondAttribute="centerY" id="XSt-19-Zhm"/>
+                            <constraint firstItem="if4-wB-w5T" firstAttribute="centerX" secondItem="2dT-NM-bUe" secondAttribute="centerX" id="a4i-kF-eyk"/>
+                            <constraint firstItem="XQK-Nh-I7g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mep-c7-bGy" secondAttribute="leading" id="h4w-F5-Icb"/>
+                            <constraint firstItem="if4-wB-w5T" firstAttribute="leading" secondItem="Mep-c7-bGy" secondAttribute="leading" constant="103" id="kPl-kB-nUW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Balance Remaining" id="Y8o-JG-psw"/>
+                    <connections>
+                        <outlet property="amountRemaining" destination="if4-wB-w5T" id="EM4-oo-HdE"/>
+                        <outlet property="howMuchYouveSpent" destination="XQK-Nh-I7g" id="T19-Do-fVP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNT-od-aW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1685" y="35"/>
+            <point key="canvasLocation" x="-1685.5072463768117" y="34.821428571428569"/>
         </scene>
         <!--Ledger-->
         <scene sceneID="boF-tA-Pra">

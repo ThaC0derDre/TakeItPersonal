@@ -7,7 +7,7 @@
 
 import UIKit
 import RealmSwift
-class MonthsTableViewController: UITableViewController {
+class MonthsTableViewController: UITableViewController, UIGestureRecognizerDelegate {
     
     let realm = try! Realm()
     
@@ -17,7 +17,11 @@ class MonthsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         load()
+        
+        self.hideKeyboardWhenTappedAround()
+        
     }
+    
     //MARK: - TableView DataSource Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datesArray?.count ?? 1
@@ -67,7 +71,6 @@ class MonthsTableViewController: UITableViewController {
             
             alertTextField.placeholder = "Add New Month"
             textField = alertTextField
-          
             
         }
         present(alert, animated: true, completion: nil)
@@ -132,4 +135,17 @@ class MonthsTableViewController: UITableViewController {
     
   
     
+}
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
