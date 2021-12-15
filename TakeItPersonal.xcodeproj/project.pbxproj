@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D9F781B6DDEBB7EECAFA8EE /* Pods_TakeItPersonal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F55D7A138F3A4DA13DF307 /* Pods_TakeItPersonal.framework */; };
+		3105CDA42769C42100033514 /* GetSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105CDA32769C42100033514 /* GetSum.swift */; };
 		311BFBF127641DA700BA9CDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFBF027641DA700BA9CDF /* AppDelegate.swift */; };
 		311BFBF327641DA700BA9CDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BFBF227641DA700BA9CDF /* SceneDelegate.swift */; };
 		311BFBF827641DA700BA9CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311BFBF627641DA700BA9CDF /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3105CDA32769C42100033514 /* GetSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSum.swift; sourceTree = "<group>"; };
 		311BFBED27641DA700BA9CDF /* TakeItPersonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItPersonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		311BFBF027641DA700BA9CDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		311BFBF227641DA700BA9CDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				311BFC1C2764773700BA9CDF /* Months.swift */,
 				311BFC1E2764775F00BA9CDF /* Ledgers.swift */,
+				3105CDA32769C42100033514 /* GetSum.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				311BFC1D2764773700BA9CDF /* Months.swift in Sources */,
 				311BFC1F2764775F00BA9CDF /* Ledgers.swift in Sources */,
 				311BFC0827641F8800BA9CDF /* MonthsTableViewController.swift in Sources */,
+				3105CDA42769C42100033514 /* GetSum.swift in Sources */,
 				31C6C8642766F1CE004605B9 /* TransactionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

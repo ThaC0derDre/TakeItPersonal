@@ -9,8 +9,8 @@ import Foundation
 import RealmSwift
 
 class TransactionViewController: UITableViewController {
-    
-    var totalSumofTransactionsThisMonth = 0.0
+    let theSum = GetSum()
+//    var totalSumofTransactionsThisMonth = 0.0
     
     let realm = try! Realm()
 
@@ -171,8 +171,8 @@ class TransactionViewController: UITableViewController {
                 falsey += l
                 
             }
-            totalSumofTransactionsThisMonth = round(1000.0 * falsey) / 1000.0
-            print(totalSumofTransactionsThisMonth)
+            theSum.totalSumofTransactionsThisMonth = round(1000.0 * falsey) / 1000.0
+           
             print("OHHHHHHHHHHHHHHHHHHHHHH K, Here Is That: \(testerTimmy.ledger.value(forKey: "amount"))")
         }
     }

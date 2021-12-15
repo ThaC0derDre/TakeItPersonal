@@ -13,7 +13,7 @@ class QuickLookTableViewController: UIViewController {
     @IBOutlet weak var amountRemaining: UILabel!
     @IBOutlet weak var howMuchYouveSpent: UILabel!
     var animationView: AnimationView?
-    let transferAmount = TransactionViewController().totalSumofTransactionsThisMonth
+    let transferAmount = GetSum().totalSumofTransactionsThisMonth
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +24,14 @@ class QuickLookTableViewController: UIViewController {
         view.addSubview(animationView!)
         amountRemaining.text = ("Out of $250, you have \(250-transferAmount) remaining")
         howMuchYouveSpent.text = ("You've spent \(transferAmount) so far this month")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animationView?.play()
-    }
+        amountRemaining.text = ("Out of $250, you have \(250-transferAmount) remaining")
+        howMuchYouveSpent.text = ("You've spent \(transferAmount) so far this month")    }
     override func viewWillDisappear(_ animated: Bool) {
         animationView?.stop()
     }
