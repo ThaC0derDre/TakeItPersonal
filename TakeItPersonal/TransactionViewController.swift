@@ -20,6 +20,7 @@ class TransactionViewController: UITableViewController {
     var selectedMonth: Months? {
         didSet{
          loadItems()
+            getSum()
         }
     }
     
@@ -55,10 +56,6 @@ class TransactionViewController: UITableViewController {
     }
 
     @IBAction func newLedgerPressed(_ sender: UIBarButtonItem) {
-//        if let testerTimmy = selectedMonth{
-//
-//            print("OHHHHHHHHHHHHHHHHHHHHHH K, Here Is That: \(testerTimmy.ledger.value(forKey: "amount"))")
-//        }
         let alert = UIAlertController(title: "Add Transactions", message: "", preferredStyle: .alert)
         var amountTextField = UITextField()
         var dateTextField = UITextField()
@@ -149,32 +146,20 @@ class TransactionViewController: UITableViewController {
         getSum()
            return true
 }
+    // Grabing the total sum of 'amount'
     func getSum(){
-        var falsey = 0.0
-        if let testerTimmy = selectedMonth{
-            let sumArray:Array = testerTimmy.ledger.value(forKey: "amount")
-            var theRealArray:Array<String> = []
-            for i in sumArray {
-                let changerToString = String(describing: i)
-                theRealArray.append(changerToString)
+            if let currentMonth = selectedMonth?.ledger {
+                //Grab all 'amounts' from each entry
+                let allNumbers = currentMonth.map { $0.amount}
+                // place result into an array with just the numbers
+                let arrayOfSums = Array(allNumbers)
+                //sum 'em up
+                let sum = arrayOfSums.reduce(0, +)
+                //round it up to the nearest hundreth
+                let theSumRounded = round(1000.0 * sum) / 1000.0
+                //Turn into string, and dont cut off
+                let tipText: String = String(format: "%.2f", theSumRounded)
+                print("This is tiptext \(tipText)")
             }
-            
-            var theFinalArray:Array<Double> = []
-            
-            for i in theRealArray{
-
-                if let gotEm = Double(i){
-                    theFinalArray.append(gotEm)
-                }
-            }
-            for l in theFinalArray{
-                falsey += l
-                
-            }
-            theSum.totalSumofTransactionsThisMonth = round(1000.0 * falsey) / 1000.0
-           
-            print("OHHHHHHHHHHHHHHHHHHHHHH K, Here Is That: \(testerTimmy.ledger.value(forKey: "amount"))")
         }
-    }
-    
 }
