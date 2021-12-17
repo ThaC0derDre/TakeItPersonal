@@ -54,9 +54,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="dvO-Sz-deS" userLabel="Spent Label">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIk-lI-MGU">
+                                    <rect key="frame" x="176.5" y="8.5" width="61.5" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="oIk-lI-MGU" firstAttribute="centerY" secondItem="dvO-Sz-deS" secondAttribute="centerY" id="d5a-wC-DAB"/>
+                                <constraint firstItem="oIk-lI-MGU" firstAttribute="centerX" secondItem="dvO-Sz-deS" secondAttribute="centerX" id="xxN-Ws-T6h"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LedgerCell" rowHeight="85" id="Tlt-dv-7Vt" customClass="TransactionCell" customModule="TakeItPersonal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tlt-dv-7Vt" id="dGk-jn-n1W">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
@@ -108,10 +125,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="totalLabel" destination="oIk-lI-MGU" id="0fn-eG-U6C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yh1-1O-ubz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-216" y="-634"/>
+            <point key="canvasLocation" x="-217.39130434782609" y="-634.15178571428567"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="uem-qf-haB">

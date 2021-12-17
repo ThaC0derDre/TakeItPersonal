@@ -9,6 +9,8 @@ import Foundation
 import RealmSwift
 
 class TransactionViewController: UITableViewController {
+    @IBOutlet weak var totalLabel: UILabel!
+    
     let theSum = GetSum()
 //    var totalSumofTransactionsThisMonth = 0.0
     
@@ -160,6 +162,7 @@ class TransactionViewController: UITableViewController {
                 //Turn into string, and dont cut off
                 let tipText: String = String(format: "%.2f", theSumRounded)
                 print("This is tiptext \(tipText)")
+                totalLabel.text = "Total: \(tipText)"
             }
         }
 }
