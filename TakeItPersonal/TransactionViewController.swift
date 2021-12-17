@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 class TransactionViewController: UITableViewController {
     @IBOutlet weak var totalLabel: UILabel!
@@ -65,7 +66,9 @@ class TransactionViewController: UITableViewController {
         var dateTextField = UITextField()
         var notesTextField = UITextField()
         
-        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { UIAlertAction in
+            return
+        }
         let action = UIAlertAction(title: "Add Item", style: .default) { action in
             
             let amountString = amountTextField.text
@@ -107,6 +110,7 @@ class TransactionViewController: UITableViewController {
             notes.placeholder = "What'd you purchase?"
             notesTextField = notes
         }
+        alert.addAction(cancelAction)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
