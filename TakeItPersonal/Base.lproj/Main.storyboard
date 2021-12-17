@@ -55,11 +55,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="dvO-Sz-deS" userLabel="Spent Label">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-kI-W9p">
-                                    <rect key="frame" x="170.5" y="-2.5" width="73" height="49"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-kI-W9p">
+                                    <rect key="frame" x="170.5" y="2.5" width="73" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIk-lI-MGU" userLabel="$ Label">
                                             <rect key="frame" x="0.0" y="0.0" width="73" height="26.5"/>
@@ -68,7 +68,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhg-hR-9If" userLabel="Total Label">
-                                            <rect key="frame" x="18" y="26.5" width="37" height="22.5"/>
+                                            <rect key="frame" x="18" y="27.5" width="37" height="22.5"/>
                                             <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -83,27 +83,27 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LedgerCell" rowHeight="85" id="Tlt-dv-7Vt" customClass="TransactionCell" customModule="TakeItPersonal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88.5" width="414" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LedgerCell" rowHeight="65" id="Tlt-dv-7Vt" customClass="TransactionCell" customModule="TakeItPersonal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99.5" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tlt-dv-7Vt" id="dGk-jn-n1W">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-1v-wuC" userLabel="Date Label">
-                                            <rect key="frame" x="20" y="20" width="61.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="5" width="61.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-HJ-WuD" userLabel="Amount Label">
-                                            <rect key="frame" x="349.5" y="20" width="44.5" height="20.5"/>
+                                            <rect key="frame" x="349.5" y="5" width="44.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Thangs For The Fam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-NH-QVC" userLabel="Notes Label">
-                                            <rect key="frame" x="20" y="60.5" width="204" height="20.5"/>
+                                            <rect key="frame" x="20" y="45.5" width="204" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -115,9 +115,9 @@
                                         <constraint firstItem="fO0-HJ-WuD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FnH-1v-wuC" secondAttribute="trailing" constant="8" symbolic="YES" id="fVl-Ee-EO1"/>
                                         <constraint firstItem="6w1-NH-QVC" firstAttribute="top" secondItem="FnH-1v-wuC" secondAttribute="bottom" constant="20" id="iPN-dX-xNU"/>
                                         <constraint firstItem="6w1-NH-QVC" firstAttribute="leading" secondItem="FnH-1v-wuC" secondAttribute="leading" id="nYS-Km-AHH"/>
-                                        <constraint firstItem="fO0-HJ-WuD" firstAttribute="top" secondItem="dGk-jn-n1W" secondAttribute="top" constant="20" id="tUW-cj-RF4"/>
+                                        <constraint firstItem="fO0-HJ-WuD" firstAttribute="top" secondItem="dGk-jn-n1W" secondAttribute="top" constant="5" id="tUW-cj-RF4"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6w1-NH-QVC" secondAttribute="trailing" constant="20" symbolic="YES" id="ujj-ij-xKv"/>
-                                        <constraint firstItem="FnH-1v-wuC" firstAttribute="top" secondItem="dGk-jn-n1W" secondAttribute="top" constant="20" id="xPo-0a-Weh"/>
+                                        <constraint firstItem="FnH-1v-wuC" firstAttribute="top" secondItem="dGk-jn-n1W" secondAttribute="top" constant="5" id="xPo-0a-Weh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
