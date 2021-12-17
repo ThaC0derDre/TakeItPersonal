@@ -56,7 +56,9 @@ class TransactionViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     @IBAction func newLedgerPressed(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add Transactions", message: "", preferredStyle: .alert)
         var amountTextField = UITextField()
