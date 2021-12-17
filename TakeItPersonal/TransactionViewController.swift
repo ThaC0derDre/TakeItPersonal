@@ -162,7 +162,7 @@ class TransactionViewController: UITableViewController {
                 //Turn into string, and dont cut off
                 let tipText: String = String(format: "%.2f", theSumRounded)
                 print("This is tiptext \(tipText)")
-                totalLabel.text = "Total: \(tipText)"
+                totalLabel.text = "$\(tipText)"
             }
         }
 }
