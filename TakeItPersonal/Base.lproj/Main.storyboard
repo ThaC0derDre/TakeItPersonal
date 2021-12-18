@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Month-->
+        <!--Months-->
         <scene sceneID="X1B-cn-LK8">
             <objects>
                 <tableViewController id="n78-Mt-f8o" customClass="MonthsTableViewController" customModule="TakeItPersonal" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="n78-Mt-f8o" id="pJS-Mn-eJT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Month" id="CPw-6a-JZR">
+                    <navigationItem key="navigationItem" title="Months" id="CPw-6a-JZR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oyd-Fo-akj">
                             <connections>
                                 <action selector="addButtonPressed:" destination="n78-Mt-f8o" id="Y3q-2d-BMk"/>
@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="-1049" y="-634"/>
         </scene>
-        <!--Ledger-->
+        <!--Transactions-->
         <scene sceneID="HfM-EZ-zwh">
             <objects>
                 <tableViewController id="BgU-cH-SVi" customClass="TransactionViewController" customModule="TakeItPersonal" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,8 +129,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ledger" id="wFX-Lq-fCe">
-                        <barButtonItem key="backBarButtonItem" title="Ledger" id="BUb-TS-ECc"/>
+                    <navigationItem key="navigationItem" title="Transactions" id="wFX-Lq-fCe">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="mgE-oR-uIA">
                             <connections>
                                 <action selector="newLedgerPressed:" destination="BgU-cH-SVi" id="Fra-Kw-XQx"/>
@@ -153,6 +152,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="m8r-bd-TJQ" kind="relationship" relationship="viewControllers" id="C6Y-O0-qxR"/>

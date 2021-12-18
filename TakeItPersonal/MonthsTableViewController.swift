@@ -39,20 +39,30 @@ class MonthsTableViewController: UITableViewController, UIGestureRecognizerDeleg
     }
     
     
-    //MARK: - Add New Dates
-    
+    //MARK: - Segue
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToLedger", sender: self)
-        tableView.deselectRow(at: indexPath, animated: true) 
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! TransactionViewController
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedMonth = datesArray?[indexPath.row]
+            let theSelectedDate = datesArray![indexPath.row]
+            destinationVC.selectedMonth = theSelectedDate
+            // Make selected month display as the back Button
+            if let first = theSelectedDate.dates.components(separatedBy: " ").first {
+                // get rid of Comma
+                if first.contains(","){
+                    let clean = first.filter { $0 != "," }
+                    navigationItem.backButtonTitle = clean
+                }
+            }
+
         }
     }
     
+    //MARK: - Add New Dates
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         

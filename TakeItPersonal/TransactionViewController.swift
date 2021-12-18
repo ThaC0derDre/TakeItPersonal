@@ -24,7 +24,6 @@ class TransactionViewController: UITableViewController {
         didSet{
          loadItems()
             getSum()
-            grabMonthTitle()
         }
     }
     
@@ -173,15 +172,4 @@ class TransactionViewController: UITableViewController {
                 totalLabel.text = "$\(tipText)"
             }
         }
-    func grabMonthTitle(){
-        if let theMonth = selectedMonth?.dates {
-            if let first = theMonth.components(separatedBy: " ").first {
-                // get rid of Comma
-                if first.contains(","){
-                    let clean = first.filter { $0 != "," }
-                    navigationItem.title = clean
-                }
-            }
-        }
-    }
 }
