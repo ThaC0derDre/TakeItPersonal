@@ -103,8 +103,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Thangs For The Fam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-NH-QVC" userLabel="Notes Label">
-                                            <rect key="frame" x="20" y="45.5" width="215" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <rect key="frame" x="20" y="35.5" width="189.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -113,7 +113,7 @@
                                         <constraint firstAttribute="trailing" secondItem="fO0-HJ-WuD" secondAttribute="trailing" constant="20" id="9k0-cb-GDl"/>
                                         <constraint firstItem="FnH-1v-wuC" firstAttribute="leading" secondItem="dGk-jn-n1W" secondAttribute="leading" constant="20" id="aOZ-a4-H3n"/>
                                         <constraint firstItem="fO0-HJ-WuD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FnH-1v-wuC" secondAttribute="trailing" constant="8" symbolic="YES" id="fVl-Ee-EO1"/>
-                                        <constraint firstItem="6w1-NH-QVC" firstAttribute="top" secondItem="FnH-1v-wuC" secondAttribute="bottom" constant="20" id="iPN-dX-xNU"/>
+                                        <constraint firstItem="6w1-NH-QVC" firstAttribute="top" secondItem="FnH-1v-wuC" secondAttribute="bottom" constant="10" id="iPN-dX-xNU"/>
                                         <constraint firstItem="6w1-NH-QVC" firstAttribute="leading" secondItem="FnH-1v-wuC" secondAttribute="leading" id="nYS-Km-AHH"/>
                                         <constraint firstItem="fO0-HJ-WuD" firstAttribute="top" secondItem="dGk-jn-n1W" secondAttribute="top" constant="5" id="tUW-cj-RF4"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6w1-NH-QVC" secondAttribute="trailing" constant="20" symbolic="YES" id="ujj-ij-xKv"/>
