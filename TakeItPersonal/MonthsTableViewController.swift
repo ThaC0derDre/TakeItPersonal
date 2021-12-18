@@ -109,6 +109,8 @@ class MonthsTableViewController: UITableViewController, UIGestureRecognizerDeleg
             completionHandler(result)
         }
         trash.backgroundColor = .systemRed
+        trash.image = UIImage(systemName: "trash")
+        
         let configuration = UISwipeActionsConfiguration(actions: [trash])
 
         return configuration

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -146,114 +145,6 @@
             </objects>
             <point key="canvasLocation" x="-217.39130434782609" y="-634.15178571428567"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="uem-qf-haB">
-            <objects>
-                <viewController id="BXp-e8-Bzr" customClass="UITableViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KJg-ZT-GTD" customClass="TransactionCreateViewController" customModule="TakeItPersonal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-yo-mUj">
-                                <rect key="frame" x="157" y="373.5" width="100" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="MCJ-DY-raq"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="yCA-d1-1LW"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Submit">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="submitButtonPressed:" destination="KJg-ZT-GTD" eventType="touchUpInside" id="vsl-8f-ssB"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="s8V-zk-81P" userLabel="Main Text Stack">
-                                <rect key="frame" x="50" y="94" width="314" height="239.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cvn-Op-tlb">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="64.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRk-gs-yAU">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gr8-si-dUB">
-                                                <rect key="frame" x="0.0" y="30.5" width="314" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KVI-Ap-NRK" userLabel="Amount Stack">
-                                        <rect key="frame" x="0.0" y="87.5" width="314" height="64.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMOUNT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2co-2u-lbO" userLabel="AMOUNT">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72s-kw-No3">
-                                                <rect key="frame" x="0.0" y="30.5" width="314" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0BL-7k-Q02" userLabel="Notes Stack">
-                                        <rect key="frame" x="0.0" y="175" width="314" height="64.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTES:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEb-8n-y6f" userLabel="NOTES">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tze-SM-Gjy">
-                                                <rect key="frame" x="0.0" y="30.5" width="314" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arr-3m-1BB">
-                                <rect key="frame" x="34.5" y="219" width="10.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ra9-5w-Vgx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ra9-5w-Vgx" firstAttribute="trailing" secondItem="s8V-zk-81P" secondAttribute="trailing" constant="50" id="AHh-gr-Q9q"/>
-                            <constraint firstItem="UUu-yo-mUj" firstAttribute="centerX" secondItem="s8V-zk-81P" secondAttribute="centerX" id="NEE-qY-AbG"/>
-                            <constraint firstItem="s8V-zk-81P" firstAttribute="leading" secondItem="ra9-5w-Vgx" secondAttribute="leading" constant="50" id="PMK-Pp-H2o"/>
-                            <constraint firstItem="72s-kw-No3" firstAttribute="leading" secondItem="Arr-3m-1BB" secondAttribute="trailing" constant="5" id="ZD1-OS-9KL"/>
-                            <constraint firstItem="s8V-zk-81P" firstAttribute="top" secondItem="ra9-5w-Vgx" secondAttribute="top" constant="50" id="haX-fX-vOI"/>
-                            <constraint firstItem="Arr-3m-1BB" firstAttribute="centerY" secondItem="72s-kw-No3" secondAttribute="centerY" id="tdJ-eP-9c1"/>
-                            <constraint firstItem="UUu-yo-mUj" firstAttribute="top" secondItem="s8V-zk-81P" secondAttribute="bottom" constant="40" id="uzN-wh-ggv"/>
-                        </constraints>
-                        <connections>
-                            <outlet property="amountTextField" destination="72s-kw-No3" id="Qew-7E-Daj"/>
-                            <outlet property="dateTextField" destination="Gr8-si-dUB" id="afM-sB-F5g"/>
-                            <outlet property="noteTextField" destination="Tze-SM-Gjy" id="njY-HH-fFg"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" id="3d1-qf-3d6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Or-uU-sID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="767" y="-634"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15f-a1-f3i">
             <objects>
@@ -357,12 +248,4 @@
             <point key="canvasLocation" x="-1720" y="-634"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
