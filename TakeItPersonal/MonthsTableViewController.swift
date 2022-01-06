@@ -33,6 +33,9 @@ class MonthsTableViewController: UITableViewController, UIGestureRecognizerDeleg
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "MonthsCell", for: indexPath)
         cell.textLabel?.text = label?.dates ?? "No Months Added yet"
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        cell.textLabel?.font = UIFont(name: "Noteworthy", size: 20)
+        
         
         return cell
         
